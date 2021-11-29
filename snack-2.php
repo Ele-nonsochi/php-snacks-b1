@@ -42,10 +42,43 @@ $posts = [
 ],
 ];
 
+/*foreach ($posts as $date => $value) {
+    echo $date ;
 
+    for ($i=0; $i < count($value); $i++) {
+        $post = $value[$i];
+    
+    echo $post['title'];
+    echo $post['author'];
+    echo $post['text'];
+         
+    }
+};*/
 
 ?>
 
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    foreach ($posts as $date => $value) {
+        echo "<h2>{$date}</h2>" ;
+    
+        for ($i=0; $i < count($value); $i++) {
+            $post = $value[$i];
+        
+        echo $post['title'];
+        echo $post['author'];
+        echo $post['text'];
+             
+        }
+    };
+    ?>
+</body>
+</html>
